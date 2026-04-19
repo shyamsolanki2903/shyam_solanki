@@ -166,7 +166,6 @@ section{padding:6rem 3rem}
 .exp-left{text-align:right;padding-top:0.1rem;padding-right:1.25rem;position:relative}
 .exp-period{font-size:0.75rem;color:var(--text-dim);font-family:'Geist Mono',monospace;margin-bottom:0.5rem;display:block}
 .exp-dot{width:10px;height:10px;border-radius:50%;background:var(--text);border:2px solid var(--bg);box-shadow:0 0 0 2px var(--text);position:absolute;right:-5px;top:0.15rem}
-.exp-dot::after{content:'';position:absolute;left:10px;top:50%;width:2rem;height:1px;background:var(--border);transform:translateY(-50%)}
 .exp-right{padding-left:2rem}
 .exp-role{font-size:1.05rem;font-weight:600;color:var(--text);margin-bottom:0.25rem}
 .exp-company{font-size:0.85rem;color:var(--text-muted);margin-bottom:0.85rem}
