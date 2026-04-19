@@ -1,88 +1,70 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shyam Solanki — Full Stack Developer</title>
-  <meta name="description" content="Portfolio of Shyam Solanki — Full Stack Developer specializing in PHP, Flutter, Python, FastAPI, AWS and AI automation.">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <title>Shyam Solanki — Full Stack Engineer</title>
+  <meta name="description" content="Hey, I'm Shyam — a full stack engineer from Mumbai who builds real products used by real people.">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="bg-pattern"></div>
-
 <nav id="nav">
-  <a href="#hero" class="nav-logo">SS.</a>
+  <a href="#" class="nav-logo">shyam.dev</a>
   <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#about">about</a></li>
+    <li><a href="#work">work</a></li>
+    <li><a href="#projects">projects</a></li>
+    <li><a href="#experience">experience</a></li>
+    <li><a href="#contact">contact</a></li>
   </ul>
   <div class="nav-right">
+    <div class="status-pill"><span class="status-dot"></span>open to work</div>
     <button class="nav-menu-btn" aria-label="Menu">☰</button>
   </div>
 </nav>
 
 <!-- HERO -->
 <section id="hero">
-  <div class="hero-bg-blob"></div>
-  <div class="hero-grid">
-    <div class="fade-in">
-      <div class="hero-label">Mumbai, India · Open to Opportunities</div>
-      <h1 class="hero-name">Hello,<br>I'm <span>Shyam</span><br>Solanki.</h1>
-      <p class="hero-role">
-        <span id="typed-role">Full Stack Developer</span><span class="typed-cursor">|</span>
+  <div class="hero-inner">
+    <div class="hero-text fade-in">
+      <p class="hero-greeting">Hey there, I'm</p>
+      <h1 class="hero-name">Shyam<br>Solanki.</h1>
+      <p class="hero-tagline">Full stack engineer from Mumbai.<br>I build <span class="underline-accent">real products</span> used by real people.</p>
+      <p class="hero-bio">
+        Currently at <strong>ISF Analytica</strong> building AI pipelines &amp; OTT platforms.
+        Co-founded <strong>EduRoot</strong> — a school ERP now live in 2+ schools with paying clients.
+        Cut AWS costs by 50%+ and automated workflows that now run on their own.
       </p>
-      <p class="hero-tagline">I build scalable systems, optimize cloud costs, and automate real-world workflows.</p>
-      <p class="hero-desc">
-        B.Tech CSE graduate with hands-on production experience — shipped a live OTT platform,
-        cut AWS costs by 50%+, and built AI pipelines that run 100% autonomously across 5+ platforms.
-      </p>
-      <div class="hero-cta" style="flex-wrap:nowrap;align-items:center;">
-        <a href="#projects" class="btn-primary">View Projects</a>
-        <a href="https://drive.google.com/file/d/1_miyXjK9NDk7Ns7r4jFU32UhHkXNwP1Z/view?usp=sharing" target="_blank" rel="noopener" class="btn-outline">⬇ Resume</a>
-        <a href="#contact" class="btn-hire">Hire Me</a>
+      <div class="hero-chips">
+        <span class="hchip">PHP</span><span class="hchip">Python</span>
+        <span class="hchip">Flutter</span><span class="hchip">FastAPI</span>
+        <span class="hchip">AWS</span><span class="hchip">n8n</span>
+        <span class="hchip">React</span><span class="hchip">MySQL</span>
+      </div>
+      <div class="hero-cta">
+        <a href="#projects" class="btn-main">see my work →</a>
+        <a href="https://drive.google.com/file/d/1_miyXjK9NDk7Ns7r4jFU32UhHkXNwP1Z/view?usp=sharing" target="_blank" rel="noopener" class="btn-ghost">resume ↗</a>
+        <a href="#contact" class="btn-ghost">hire me</a>
       </div>
     </div>
-    <div class="fade-in" style="transition-delay:0.2s">
-      <div class="hero-card">
-        <div class="hero-card-inner">
-    
-          <div class="avatar"><img src="/profile.jpeg" alt="Shyam Solanki" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></div>
-    
-          <h3>Shyam Solanki</h3>
-    
-          <!-- 🔥 Better positioning -->
-          <p class="hero-card-sub">Full Stack Engineer · SaaS & Automation · Mumbai, IN</p>
-    
-          <!-- 🔥 Strong stats (keep as is - already great) -->
-          <div class="stat-row">
-            <div class="stat">
-              <div class="stat-num">50%</div>
-              <div class="stat-label">AWS Cost Reduction</div>
-            </div>
-            <div class="stat">
-              <div class="stat-num">5+</div>
-              <div class="stat-label">Platforms Live</div>
-            </div>
-            <div class="stat">
-              <div class="stat-num">100%</div>
-              <div class="stat-label">Automation</div>
-            </div>
-          </div>
-          <div class="hero-tags">
-            <span class="tag">FastAPI</span>
-            <span class="tag">Python</span>
-            <span class="tag">PHP</span>
-            <span class="tag">AWS</span>
-            <span class="tag">React</span>
-            <span class="tag">Flutter</span>
-            <span class="tag">n8n</span>
-          </div>
+    <div class="hero-card fade-in" style="transition-delay:0.2s">
+      <div class="card-photo">
+        <img src="profile.jpeg" alt="Shyam Solanki" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=\'card-initials\'>SS</div>'">
+      </div>
+      <div class="card-body">
+        <div class="card-name">Shyam Solanki</div>
+        <div class="card-role">Full Stack Engineer · Mumbai</div>
+        <div class="card-divider"></div>
+        <div class="card-stats">
+          <div class="cstat"><div class="cstat-num">50%↓</div><div class="cstat-label">AWS costs</div></div>
+          <div class="cstat"><div class="cstat-num">2+</div><div class="cstat-label">live schools</div></div>
+          <div class="cstat"><div class="cstat-num">100%</div><div class="cstat-label">automated</div></div>
+        </div>
+        <div class="card-links">
+          <a href="https://linkedin.com/in/shyam-solanki" target="_blank" class="card-link">LinkedIn ↗</a>
+          <a href="mailto:shyamsolanki2903@gmail.com" class="card-link">Email ↗</a>
         </div>
       </div>
     </div>
@@ -90,357 +72,252 @@
 </section>
 
 <!-- ABOUT -->
-<section id="about">
+<section id="about" class="section-alt">
   <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-eyebrow">about me</span>
+      <h2 class="section-title">A bit about<br><em>who I am</em></h2>
+    </div>
     <div class="about-grid">
-      <div class="fade-in">
-        <div class="section-label">Who I Am</div>
-        <h2 class="section-title">About <span>Me</span></h2>
-        <div class="section-divider"></div>
-        <div class="about-text">
-          <p>
-            I design and ship production-grade systems — from scalable backend APIs to cross-platform apps and automated workflows. Currently building at ISF Analytica & Informatica Pvt. Ltd., Mumbai, and co-founding EduRoot, a live School ERP SaaS with paying clients.
-          </p>
-          <div class="about-highlight">
-            "I don't just write code — I architect systems that scale, automate what's repetitive, and deliver measurable impact."
-          </div>
-          <p>
-            I've slashed AWS bills by 50%+, shipped a live OTT platform across mobile,
-            TV & web, and engineered AI pipelines that eliminated 100% manual effort
-            in content publishing across 5+ platforms.
-          </p>
+      <div class="about-text fade-in">
+        <p>I'm a developer who actually ships. Not just side projects that sit on GitHub — I mean <strong>production systems with real users</strong>, real data, and real business impact.</p>
+        <p>My day job is at ISF Analytica where I lead development of EasyLearn — an LMS and OTT platform that runs across mobile, TV and web. Outside of that, I co-founded EduRoot with a friend — we built a school ERP from scratch and sold it to 2 schools. They're actively using it every day.</p>
+        <p>I like working on problems that matter. If it automates something tedious, saves someone money, or makes a system 10x more reliable — I'm in.</p>
+        <blockquote class="about-quote">"I don't just write code — I architect systems that scale, automate what's repetitive, and deliver measurable impact."</blockquote>
+      </div>
+      <div class="about-facts fade-in" style="transition-delay:0.15s">
+        <div class="fact-card">
+          <div class="fact-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><div class="fact-label">Location</div><div class="fact-value">Mumbai, India</div></div>
         </div>
-        <div class="achieve-list">
-          <div class="achieve-item">
-            <div class="achieve-icon">☁️</div>
-            <div class="achieve-text"><strong style="color:var(--text)">50%+ AWS cost reduction</strong> — via auto-scaling, S3 lifecycle policies, and resource rightsizing.</div>
-          </div>
-          <div class="achieve-item">
-            <div class="achieve-icon">📺</div>
-            <div class="achieve-text"><strong style="color:var(--text)">Live OTT platform</strong> — shipped across mobile, Android TV & web serving real users.</div>
-          </div>
-          <div class="achieve-item">
-            <div class="achieve-icon">🤖</div>
-            <div class="achieve-text"><strong style="color:var(--text)">100% automation</strong> — AI marketing pipeline publishing to 5+ platforms, zero manual effort.</div>
-          </div>
-          <div class="achieve-item">
-            <div class="achieve-icon">🏆</div>
-            <div class="achieve-text"><strong style="color:var(--text)">Volkswagen Hackathon 2025</strong> — built & presented an AI-based solution.</div>
-          </div>
+        <div class="fact-card">
+          <div class="fact-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+          <div><div class="fact-label">Education</div><div class="fact-value">B.Tech CSE — D.Y. Patil · CGPA 8.20</div></div>
+        </div>
+        <div class="fact-card">
+          <div class="fact-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+          <div><div class="fact-label">Currently at</div><div class="fact-value">ISF Analytica &amp; Informatica Pvt. Ltd.</div></div>
+        </div>
+        <div class="fact-card">
+          <div class="fact-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg></div>
+          <div><div class="fact-label">Also co-founded</div><div class="fact-value">EduRoot — School ERP SaaS (2+ live schools)</div></div>
+        </div>
+        <div class="fact-card">
+          <div class="fact-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div><div class="fact-label">Email</div><div class="fact-value"><a href="mailto:shyamsolanki2903@gmail.com">shyamsolanki2903@gmail.com</a></div></div>
+        </div>
+        <div class="fact-card">
+          <div class="fact-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.42 2 2 0 0 1 3.57 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.13 6.13l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div><div class="fact-label">Phone</div><div class="fact-value"><a href="tel:+918866001801">+91 8866001801</a></div></div>
+        </div>
+        <div class="fact-card fact-card--highlight">
+          <div class="fact-icon" style="color:#16a34a"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+          <div><div class="fact-label">Availability</div><div class="fact-value" style="color:#16a34a;font-weight:600;">Open to new opportunities</div></div>
         </div>
       </div>
-      <div class="fade-in" style="transition-delay:0.15s">
-        <div class="info-grid">
-          <div class="info-item"><div class="info-label">Full Name</div><div class="info-value">Shyam Solanki</div></div>
-          <div class="info-item"><div class="info-label">Role</div><div class="info-value">Full Stack Developer</div></div>
-          <div class="info-item"><div class="info-label">Location</div><div class="info-value">Mumbai, India</div></div>
-          <div class="info-item"><div class="info-label">Phone</div><div class="info-value"><a href="tel:+918866001801">+91 8866001801</a></div></div>
-          <div class="info-item"><div class="info-label">Email</div><div class="info-value"><a href="mailto:shyamsolanki2903@gmail.com">shyamsolanki2903@gmail.com</a></div></div>
-          <div class="info-item"><div class="info-label">LinkedIn</div><div class="info-value"><a href="https://linkedin.com/in/shyam-solanki" target="_blank">shyam-solanki</a></div></div>
-          <div class="info-item"><div class="info-label">CGPA</div><div class="info-value">8.20 / 10</div></div>
-          <div class="info-item"><div class="info-label">Availability</div><div class="info-value" style="color:#4ec97b;">Open to opportunities</div></div>
-        </div>
+    </div>
+    <div class="achievements fade-in">
+      <div class="ach-item">
+        <div class="ach-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg></div>
+        <div><div class="ach-title">50%+ AWS cost reduction</div><div class="ach-desc">Via auto-scaling, S3 lifecycle policies &amp; instance rightsizing</div></div>
+      </div>
+      <div class="ach-item">
+        <div class="ach-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="15" rx="2"/><polyline points="17 2 12 7 7 2"/></svg></div>
+        <div><div class="ach-title">Shipped a live OTT platform</div><div class="ach-desc">Mobile, Android TV &amp; web — real users, real usage</div></div>
+      </div>
+      <div class="ach-item">
+        <div class="ach-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M4.93 4.93a10 10 0 0 0 0 14.14"/></svg></div>
+        <div><div class="ach-title">100% automated AI pipeline</div><div class="ach-desc">Saves 5+ hours/day, publishing to 5+ platforms hands-free</div></div>
+      </div>
+      <div class="ach-item">
+        <div class="ach-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"/></svg></div>
+        <div><div class="ach-title">Volkswagen Hackathon 2025</div><div class="ach-desc">Built &amp; presented an AI-based solution</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SKILLS — Tags only, no fake % -->
-<section id="skills">
+<!-- SKILLS -->
+<section id="work">
   <div class="container">
-    <div class="skills-layout">
-      <div class="fade-in">
-        <div class="section-label">Expertise</div>
-        <h2 class="section-title">My <span>Skills</span></h2>
-        <div class="section-divider"></div>
-        <p style="color:var(--text-muted)">Technologies I use daily to ship production-ready, scalable software across web, mobile, and cloud.</p>
+    <div class="section-header fade-in">
+      <span class="section-eyebrow">skills</span>
+      <h2 class="section-title">What I work<br><em>with</em></h2>
+    </div>
+    <div class="skills-grid fade-in">
+
+      <div class="skill-card">
+        <div class="skill-card-header">
+          <div class="skill-card-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+          <div class="skill-card-title">Backend &amp; Languages</div>
+        </div>
+        <div class="skill-tags">
+          <span class="stag-pro stag-core">PHP</span>
+          <span class="stag-pro stag-core">Python</span>
+          <span class="stag-pro stag-core">FastAPI</span>
+          <span class="stag-pro">REST APIs</span>
+          <span class="stag-pro">MySQL</span>
+          <span class="stag-pro">MongoDB</span>
+        </div>
       </div>
-      <div class="skills-categories fade-in" style="transition-delay:0.15s">
 
-        <div class="skill-group">
-          <div class="skill-group-label">Backend & Languages</div>
-          <div class="skill-chips">
-            <span class="chip chip-primary chip-star">PHP</span>
-            <span class="chip chip-primary chip-star">Python</span>
-            <span class="chip chip-primary chip-star">FastAPI</span>
-            <span class="chip chip-primary">REST APIs</span>
-            <span class="chip chip-primary">MySQL</span>
-            <span class="chip chip-primary">MongoDB</span>
-          </div>
+      <div class="skill-card">
+        <div class="skill-card-header">
+          <div class="skill-card-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
+          <div class="skill-card-title">Frontend &amp; Mobile</div>
         </div>
-
-        <div class="skill-group">
-          <div class="skill-group-label">Frontend & Mobile</div>
-          <div class="skill-chips">
-            <span class="chip chip-secondary chip-star">Flutter / Dart</span>
-            <span class="chip chip-secondary chip-star">React</span>
-            <span class="chip chip-secondary">Capacitor</span>
-            <span class="chip chip-secondary">HTML / CSS / JS</span>
-          </div>
+        <div class="skill-tags">
+          <span class="stag-pro stag-core">Flutter / Dart</span>
+          <span class="stag-pro stag-core">React</span>
+          <span class="stag-pro">Capacitor</span>
+          <span class="stag-pro">HTML / CSS / JS</span>
         </div>
-
-        <div class="skill-group">
-          <div class="skill-group-label">Cloud & Infrastructure</div>
-          <div class="skill-chips">
-            <span class="chip chip-cloud chip-star">AWS EC2</span>
-            <span class="chip chip-cloud chip-star">DigitalOcean</span>
-            <span class="chip chip-cloud chip-star">Git</span>
-            <span class="chip chip-cloud">AWS S3</span>
-            <span class="chip chip-cloud">AWS RDS</span>
-            <span class="chip chip-cloud">CloudFront</span>
-            <span class="chip chip-cloud">Nginx</span>
-            <span class="chip chip-cloud">Linux</span>
-          </div>
-        </div>
-
-        <div class="skill-group">
-          <div class="skill-group-label">AI & Automation</div>
-          <div class="skill-chips">
-            <span class="chip chip-ai chip-star">n8n</span>
-            <span class="chip chip-ai">Make / Integromat</span>
-            <span class="chip chip-ai">OpenAI API</span>
-            <span class="chip chip-ai">Stable Diffusion</span>
-            <span class="chip chip-ai">Cloudinary</span>
-          </div>
-        </div>
-
       </div>
+
+      <div class="skill-card">
+        <div class="skill-card-header">
+          <div class="skill-card-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg></div>
+          <div class="skill-card-title">Cloud &amp; Infrastructure</div>
+        </div>
+        <div class="skill-tags">
+          <span class="stag-pro stag-core">AWS EC2</span>
+          <span class="stag-pro stag-core">AWS S3</span>
+          <span class="stag-pro stag-core">AWS RDS</span>
+          <span class="stag-pro">CloudFront</span>
+          <span class="stag-pro">DigitalOcean</span>
+          <span class="stag-pro">Nginx</span>
+          <span class="stag-pro">Linux</span>
+          <span class="stag-pro">Git</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-header">
+          <div class="skill-card-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 8v4l3 3"/><path d="M18 2v4h4"/></svg></div>
+          <div class="skill-card-title">AI &amp; Automation</div>
+        </div>
+        <div class="skill-tags">
+          <span class="stag-pro stag-core">n8n</span>
+          <span class="stag-pro stag-core">Make / Integromat</span>
+          <span class="stag-pro">OpenAI API</span>
+          <span class="stag-pro">Stable Diffusion</span>
+          <span class="stag-pro">Cloudinary</span>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
-<!-- PROJECTS — Problem / Solution / Impact format -->
-<section id="projects">
+<!-- PROJECTS -->
+<section id="projects" class="section-alt">
   <div class="container">
-    <div class="fade-in">
-      <div class="section-label">Portfolio</div>
-      <h2 class="section-title">Featured <span>Projects</span></h2>
-      <div class="section-divider"></div>
-    </div>
-    <div class="projects-grid">
-
-      <!-- PROJECT 0 — HERO: EduRoot Startup -->
-      <div class="project-card project-hero fade-in">
-        <div class="project-num">01</div>
-        <div class="project-top-row">
-          <div>
-            <div class="project-year">2024 – Present</div>
-            <div class="project-type">Startup · Co-Founded</div>
-          </div>
-          <div class="project-badges">
-            <span class="badge-live">🔴 LIVE</span>
-            <span class="badge-tag">SaaS</span>
-            <span class="badge-tag">Multi-tenant</span>
-            <span class="badge-tag">Production</span>
-          </div>
-        </div>
-        <h3 class="project-title">School ERP SaaS Platform <span style="color:var(--gold);font-size:1rem">(EduRoot)</span></h3>
-        <div class="psi-block">
-          <div class="psi-item">
-            <span class="psi-label">What I built</span>
-            <span class="psi-text">Built a production-grade School ERP SaaS replacing manual workflows with a centralized, role-based system — covering student management, attendance, fees, exams, HR, and real-time analytics.</span>
-          </div>
-          <div class="psi-item">
-            <span class="psi-label">Impact</span>
-            <span class="psi-text impact-text">2+ Schools onboarded & LIVE · Paying clients converted · Real daily active users · Eliminated hours of manual admin work per day · Centralized data across all departments.</span>
-          </div>
-        </div>
-        <!-- MODULE GRID -->
-        <div class="module-grid">
-          <div class="module-chip">👨‍🎓 Student Mgmt</div>
-          <div class="module-chip">📋 Attendance</div>
-          <div class="module-chip">💰 Fees & Finance</div>
-          <div class="module-chip">📝 Examinations</div>
-          <div class="module-chip">👔 HR & Staff</div>
-          <div class="module-chip">📊 Reports & Analytics</div>
-          <div class="module-chip">🔐 Role-based Access</div>
-          <div class="module-chip">🏫 Multi-school Support</div>
-        </div>
-        <div class="project-tech" style="margin-top:1.25rem">
-          <span class="tech-tag">PHP</span>
-          <span class="tech-tag">MySQL</span>
-          <span class="tech-tag">FastAPI</span>
-          <span class="tech-tag">HTML/CSS/JS</span>
-          <span class="tech-tag">Multi-tenant SaaS</span>
-        </div>
-        <div class="project-links">
-          <button onclick="openDemoModal()" class="project-link project-link-demo" style="background:none;border:none;cursor:pointer;padding:0;font-family:inherit;font-size:0.77rem;letter-spacing:0.08em;text-transform:uppercase;">🎬 Watch Demo →</button>
-          <a href="#" class="project-link">GitHub →</a>
-        </div>
-      </div>
-      <div class="project-card fade-in" style="transition-delay:0.1s">
-        <div class="project-num">02</div>
-        <div class="project-year">2026</div>
-        <div class="project-type">AI · Automation</div>
-        <h3 class="project-title">AI Marketing Automation</h3>
-        <div class="psi-block">
-          <div class="psi-item">
-            <span class="psi-label">Problem</span>
-            <span class="psi-text">Manual content creation & posting to 5+ platforms was taking hours daily.</span>
-          </div>
-          <div class="psi-item">
-            <span class="psi-label">Solution</span>
-            <span class="psi-text">Built an end-to-end AI pipeline that generates images & videos using Stable Diffusion & OpenAI, then auto-publishes to Instagram, Facebook, LinkedIn, YouTube & WhatsApp via n8n.</span>
-          </div>
-          <div class="psi-item">
-            <span class="psi-label">Impact</span>
-            <span class="psi-text impact-text">Automated content pipeline saving 5+ hours/day · Publishing across 5+ platforms · 100% hands-free execution · Campaign analytics tracked in MongoDB.</span>
-          </div>
-        </div>
-        <div class="project-tech">
-          <span class="tech-tag">n8n</span><span class="tech-tag">OpenAI</span>
-          <span class="tech-tag">Stable Diffusion</span><span class="tech-tag">Cloudinary</span><span class="tech-tag">MongoDB</span>
-        </div>
-        <div class="project-links">
-          <a href="#" class="project-link project-link-demo">WATCH DEMO →</a>
-          <a href="#" class="project-link">GitHub →</a>
-        </div>
-      </div>
-
-      <!-- PROJECT 3 -->
-      <div class="project-card fade-in" style="transition-delay:0.2s">
-        <div class="project-num">03</div>
-        <div class="project-year">2025</div>
-        <div class="project-type">AI · Backend</div>
-        <h3 class="project-title">WhatsApp Business Automation</h3>
-        <div class="psi-block">
-          <div class="psi-item">
-            <span class="psi-label">Problem</span>
-            <span class="psi-text">Customer support team overwhelmed with repetitive queries; broadcast campaigns required full manual execution.</span>
-          </div>
-          <div class="psi-item">
-            <span class="psi-label">Solution</span>
-            <span class="psi-text">AI-powered auto-reply system using OpenAI on AWS EC2 with full conversation memory in MongoDB; automated broadcast marketing campaigns.</span>
-          </div>
-          <div class="psi-item">
-            <span class="psi-label">Impact</span>
-            <span class="psi-text impact-text">24/7 automated support · Instant response time · Full conversation history retained · 0 manual effort for broadcasts.</span>
-          </div>
-        </div>
-        <div class="project-tech">
-          <span class="tech-tag">n8n</span><span class="tech-tag">WhatsApp API</span>
-          <span class="tech-tag">OpenAI</span><span class="tech-tag">AWS EC2</span><span class="tech-tag">MongoDB</span>
-        </div>
-        <div class="project-links">
-          <a href="#" class="project-link project-link-demo">WATCH DEMO →</a>
-          <a href="#" class="project-link">GitHub →</a>
-        </div>
-      </div>
-
-      <!-- PROJECT 4 -->
-      <div class="project-card fade-in" style="transition-delay:0.3s">
-        <div class="project-num">04</div>
-        <div class="project-year">2025</div>
-        <div class="project-type">Backend · Cloud · AI</div>
-        <h3 class="project-title">Smart Hotel System</h3>
-      
-        <div class="psi-block">
-          <div class="psi-item">
-            <span class="psi-label">Problem</span>
-            <span class="psi-text">
-              Manual guest registration and identity verification causing delays, security gaps, and inconsistent records across hotel systems.
-            </span>
-          </div>
-      
-          <div class="psi-item">
-            <span class="psi-label">Solution</span>
-            <span class="psi-text">
-              Developed a scalable hotel system with OTP onboarding, real-time tracking, and AI-based face recognition for secure, fast check-ins. Built using FastAPI on AWS EC2 with RDS MySQL.
-            </span>
-          </div>
-      
-          <div class="psi-item">
-            <span class="psi-label">Impact</span>
-            <span class="psi-text impact-text">
-              Faster check-ins · AI-based identity verification · Real-time room status · Secure OTP auth · Scalable REST APIs · Deployed on AWS EC2 + RDS
-            </span>
-          </div>
-        </div>
-      
-        <div class="project-tech">
-          <span class="tech-tag">Python</span>
-          <span class="tech-tag">FastAPI</span>
-          <span class="tech-tag">AWS EC2</span>
-          <span class="tech-tag">AWS RDS</span>
-          <span class="tech-tag">Face Recognition</span>
-          <span class="tech-tag">OpenCV</span>
-          <span class="tech-tag">OTP Auth</span>
-        </div>
-      
-        <div class="project-links">
-          <a href="#" class="project-link project-link-demo">WATCH DEMO →</a>
-          <a href="#" class="project-link">GitHub →</a>
-        </div>
-      </div>
-
+    <div class="section-header fade-in">
+      <span class="section-eyebrow">projects</span>
+      <h2 class="section-title">Things I've<br><em>actually built</em></h2>
     </div>
 
-    <!-- ARCHITECTURE SECTION -->
-    <div style="margin-top:5rem" class="fade-in">
-      <div class="section-label" style="margin-bottom:1rem">System Architecture</div>
-      <h3 class="arch-title">How I build at <span style="color:var(--gold)">scale</span></h3>
-      <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:2.5rem;max-width:600px">Visual breakdown of production systems — the kind of thinking that separates engineers from coders.</p>
-      <div class="arch-grid" style="grid-template-columns:repeat(auto-fit,minmax(290px,1fr))">
-
-        <!-- EduRoot — FIRST & HIGHLIGHTED -->
-        <div class="arch-card" style="border-color:rgba(201,168,76,0.4);grid-column:span 1">
-          <div class="arch-card-label" style="color:var(--gold-light)">⭐ EduRoot — School ERP SaaS (Startup)</div>
-          <div class="arch-diagram">
-            <div class="arch-row">
-              <div class="arch-node node-client">School A<br><span>Admin Panel</span></div>
-              <div class="arch-node node-client">School B<br><span>Admin Panel</span></div>
-              <div class="arch-node node-client">Staff<br><span>Role-based</span></div>
-            </div>
-            <div class="arch-arrow">↓ Multi-tenant Layer</div>
-            <div class="arch-row">
-              <div class="arch-node node-api">PHP Backend<br><span>Core APIs</span></div>
-              <div class="arch-node node-api">FastAPI<br><span>Reports</span></div>
-            </div>
-            <div class="arch-arrow">↓ Modules</div>
-            <div class="arch-row arch-row-sm">
-              <div class="arch-node node-publish">Students</div>
-              <div class="arch-node node-publish">Fees</div>
-              <div class="arch-node node-publish">Exams</div>
-              <div class="arch-node node-publish">HR</div>
-            </div>
-            <div class="arch-arrow">↓ Database</div>
-            <div class="arch-row">
-              <div class="arch-node node-cloud">MySQL<br><span>Primary DB</span></div>
-              <div class="arch-node node-cloud">Analytics<br><span>Dashboard</span></div>
-            </div>
-            <div class="arch-badge" style="background:rgba(201,168,76,0.1);border-color:rgba(201,168,76,0.3);color:var(--gold)">2+ Schools LIVE · Paying Clients · Real Daily Users</div>
-          </div>
+    <div class="project-hero fade-in">
+      <div class="ph-left">
+        <div class="ph-badges">
+          <span class="badge-live"><span class="live-dot"></span> LIVE</span>
+          <span class="badge-tag">SaaS</span>
+          <span class="badge-tag">Co-founded</span>
+          <span class="badge-tag">Multi-tenant</span>
         </div>
-
-
-        <!-- AI Pipeline Architecture -->
-        <div class="arch-card">
-          <div class="arch-card-label">AI Marketing Pipeline</div>
-          <div class="arch-diagram">
-            <div class="arch-row">
-              <div class="arch-node node-trigger">n8n<br><span>Trigger / Scheduler</span></div>
-            </div>
-            <div class="arch-arrow">↓ AI Generation</div>
-            <div class="arch-row">
-              <div class="arch-node node-ai">OpenAI<br><span>Captions / Copy</span></div>
-              <div class="arch-node node-ai">Stable Diffusion<br><span>Image Gen</span></div>
-            </div>
-            <div class="arch-arrow">↓ Media Hosting</div>
-            <div class="arch-row">
-              <div class="arch-node node-cloud">Cloudinary<br><span>CDN + Storage</span></div>
-              <div class="arch-node node-cloud">MongoDB<br><span>Campaign Analytics</span></div>
-            </div>
-            <div class="arch-arrow">↓ Auto-Publish</div>
-            <div class="arch-row arch-row-sm">
-              <div class="arch-node node-publish">Instagram</div>
-              <div class="arch-node node-publish">LinkedIn</div>
-              <div class="arch-node node-publish">YouTube</div>
-              <div class="arch-node node-publish">WhatsApp</div>
-            </div>
-            <div class="arch-badge">100% automated · Zero manual effort</div>
-          </div>
+        <div class="ph-num">01</div>
+        <h3 class="ph-title">EduRoot — School ERP SaaS</h3>
+        <p class="ph-desc">Built a production-grade School ERP replacing manual workflows with a centralized, role-based system. My friend and I built this from scratch and sold it to real schools. They use it every single day.</p>
+        <div class="ph-impact">
+          <div class="pi-item">2+ schools onboarded &amp; live</div>
+          <div class="pi-item">Paying clients converted</div>
+          <div class="pi-item">Hours of manual work eliminated daily</div>
+          <div class="pi-item">Centralized data across all departments</div>
         </div>
+        <div class="ph-modules">
+          <span class="pm">Student Mgmt</span>
+          <span class="pm">Attendance</span>
+          <span class="pm">Fees &amp; Finance</span>
+          <span class="pm">Examinations</span>
+          <span class="pm">HR &amp; Staff</span>
+          <span class="pm">Reports &amp; Analytics</span>
+          <span class="pm">Role-based Access</span>
+          <span class="pm">Multi-school</span>
+        </div>
+        <div class="ph-stack">
+          <span class="stag">PHP</span><span class="stag">MySQL</span>
+          <span class="stag">FastAPI</span><span class="stag">HTML/CSS/JS</span>
+          <span class="stag">Multi-tenant SaaS</span>
+        </div>
+        <div class="ph-links">
+          <button onclick="openDemoModal()" class="btn-main" style="font-size:0.82rem;padding:0.6rem 1.25rem;display:inline-flex;align-items:center;gap:0.4rem;border:none;cursor:pointer;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+            Watch Demo
+          </button>
+          <a href="#" class="btn-ghost" style="font-size:0.82rem;padding:0.6rem 1.25rem;">GitHub ↗</a>
+        </div>
+      </div>
+      <div class="ph-right">
+        <div class="ph-arch">
+          <div class="pa-label">System Architecture</div>
+          <div class="pa-row">
+            <div class="pa-node pa-client">Admin<br><span>Full Access</span></div>
+            <div class="pa-node pa-client">Teacher<br><span>Classes</span></div>
+            <div class="pa-node pa-client">Student<br><span>Portal</span></div>
+            <div class="pa-node pa-client">Parent<br><span>Tracking</span></div>
+          </div>
+          <div class="pa-arrow">↓ Frontend Layer</div>
+          <div class="pa-row">
+            <div class="pa-node pa-frontend">PHP MVC<br><span>Views</span></div>
+            <div class="pa-node pa-frontend">HTML / CSS<br><span>UI Layer</span></div>
+          </div>
+          <div class="pa-arrow">↓ Backend Layer</div>
+          <div class="pa-row">
+            <div class="pa-node pa-api">PHP MVC<br><span>Core Backend</span></div>
+            <div class="pa-node pa-ai">FastAPI + Python<br><span>AI Generation</span></div>
+          </div>
+          <div class="pa-arrow">↓ Automation + Database</div>
+          <div class="pa-row">
+            <div class="pa-node pa-workflow">n8n<br><span>Workflows</span></div>
+            <div class="pa-node pa-db">SQL<br><span>Database</span></div>
+          </div>
+          <div class="pa-arrow">↓ Production</div>
+          <div class="pa-row">
+            <div class="pa-node pa-infra">DigitalOcean<br><span>App Server</span></div>
+            <div class="pa-node pa-infra">GoDaddy<br><span>Domain + DNS</span></div>
+          </div>
+          <div class="pa-badge">2+ Schools LIVE · Paying Clients</div>
+        </div>
+      </div>
+    </div>
 
+    <div class="proj-grid">
+      <div class="proj-card fade-in">
+        <div class="proj-num">02</div>
+        <div class="proj-type">AI · Automation · 2026</div>
+        <h4 class="proj-title">AI Marketing Automation</h4>
+        <p class="proj-desc">End-to-end AI pipeline generating images &amp; videos and auto-publishing to Instagram, Facebook, LinkedIn, YouTube &amp; WhatsApp. Saves 5+ hours/day.</p>
+        <div class="proj-impact">100% automated · 5+ platforms · zero manual effort</div>
+        <div class="proj-stack"><span class="stag">n8n</span><span class="stag">OpenAI</span><span class="stag">Stable Diffusion</span><span class="stag">MongoDB</span></div>
+        <div class="proj-links"><a href="#" class="plink">Live Demo →</a><a href="#" class="plink plink--muted">GitHub →</a></div>
+      </div>
+      <div class="proj-card fade-in" style="transition-delay:0.1s">
+        <div class="proj-num">03</div>
+        <div class="proj-type">AI · Backend · 2025</div>
+        <h4 class="proj-title">WhatsApp Business Automation</h4>
+        <p class="proj-desc">AI-powered auto-reply + broadcast system for customer support using OpenAI on AWS EC2. Full conversation history in MongoDB.</p>
+        <div class="proj-impact">24/7 automated support · instant replies · 0 manual effort</div>
+        <div class="proj-stack"><span class="stag">n8n</span><span class="stag">WhatsApp API</span><span class="stag">OpenAI</span><span class="stag">AWS EC2</span></div>
+        <div class="proj-links"><a href="#" class="plink">Live Demo →</a><a href="#" class="plink plink--muted">GitHub →</a></div>
+      </div>
+      <div class="proj-card fade-in" style="transition-delay:0.2s">
+        <div class="proj-num">04</div>
+        <div class="proj-type">Backend · Cloud · 2025</div>
+        <h4 class="proj-title">Hotel Management System</h4>
+        <p class="proj-desc">OTP-based hotel system with real-time room tracking. FastAPI REST APIs backed by AWS RDS MySQL. Deployed on AWS EC2.</p>
+        <div class="proj-impact">Real-time room status · secure OTP auth · scalable APIs</div>
+        <div class="proj-stack"><span class="stag">FastAPI</span><span class="stag">AWS EC2</span><span class="stag">AWS RDS</span><span class="stag">OTP Auth</span></div>
+        <div class="proj-links"><a href="#" class="plink">Live Demo →</a><a href="#" class="plink plink--muted">GitHub →</a></div>
       </div>
     </div>
   </div>
@@ -449,25 +326,26 @@
 <!-- EXPERIENCE -->
 <section id="experience">
   <div class="container">
-    <div class="exp-layout">
-      <div class="fade-in">
-        <div class="section-label">Career</div>
-        <h2 class="section-title">Work <span>Experience</span></h2>
-        <div class="section-divider"></div>
-        <p style="color:var(--text-muted)">Real-world experience shipping production software with measurable impact.</p>
-      </div>
-      <div class="timeline fade-in" style="transition-delay:0.15s">
-        <div class="exp-item">
+    <div class="section-header fade-in">
+      <span class="section-eyebrow">experience</span>
+      <h2 class="section-title">Where I've<br><em>worked</em></h2>
+    </div>
+    <div class="exp-wrap fade-in">
+      <div class="exp-item">
+        <div class="exp-left">
           <div class="exp-period">July 2025 — Present</div>
+          <div class="exp-dot"></div>
+        </div>
+        <div class="exp-right">
           <div class="exp-role">Full Stack Developer</div>
-          <div class="exp-company">ISF Analytica & Informatica Pvt. Ltd. · Mumbai</div>
-          <ul class="exp-points">
-            <li>Led end-to-end development of EasyLearn LMS — handling backend architecture, automation pipelines, and deployment — covering admissions, auto-course generation, and placement tracking using PHP, FastAPI, Python, MySQL & MongoDB.</li>
-            <li><strong style="color:var(--gold)">Reduced AWS infrastructure billing by 50%+</strong> via auto-scaling policies, S3 lifecycle management, instance rightsizing, and real-time cost monitoring dashboards.</li>
-            <li>Engineered fully automated N8N & Make workflows eliminating 100% manual effort from key business processes; MySQL-backed state management for workflow orchestration.</li>
-            <li>Designed and shipped a cross-platform OTT app — Flutter (mobile) + React + Capacitor (TV & web) — with media delivery via AWS S3 & CloudFront CDN for low-latency streaming.</li>
-            <li>Built scalable FastAPI REST APIs integrated with AWS EC2/RDS; implemented real-time data pipelines with OTP-based authentication for a hostel management system.</li>
-            <li>Led the development team — sprint planning, code reviews, and end-to-end project delivery within deadlines.</li>
+          <div class="exp-company">ISF Analytica &amp; Informatica Pvt. Ltd. · Mumbai</div>
+          <ul class="exp-list">
+            <li>Led end-to-end development of EasyLearn LMS — backend architecture, automation pipelines, and deployment using PHP, FastAPI, Python, MySQL &amp; MongoDB.</li>
+            <li><strong>Cut AWS billing by 50%+</strong> via auto-scaling, S3 lifecycle policies, instance rightsizing, and real-time cost monitoring.</li>
+            <li>Engineered N8N &amp; Make workflows eliminating 100% manual effort; MySQL-backed state management for orchestration.</li>
+            <li>Shipped cross-platform OTT app — Flutter (mobile) + React + Capacitor (TV &amp; web) — media via AWS S3 &amp; CloudFront CDN.</li>
+            <li>Built scalable FastAPI REST APIs with OTP auth on AWS EC2/RDS with real-time data pipelines.</li>
+            <li>Led dev team — sprint planning, code reviews, and on-time delivery.</li>
           </ul>
         </div>
       </div>
@@ -476,120 +354,90 @@
 </section>
 
 <!-- EDUCATION -->
-<section id="education">
+<section class="section-alt" id="education">
   <div class="container">
-    <div class="fade-in">
-      <div class="section-label">Academic</div>
-      <h2 class="section-title">My <span>Education</span></h2>
-      <div class="section-divider"></div>
+    <div class="section-header fade-in">
+      <span class="section-eyebrow">education &amp; certs</span>
+      <h2 class="section-title">Academic<br><em>background</em></h2>
     </div>
-    <div class="edu-grid fade-in" style="transition-delay:0.1s">
+    <div class="edu-grid fade-in">
       <div class="edu-card">
+        <div class="edu-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
         <div class="edu-degree">B.Tech in Computer Science</div>
-        <div class="edu-institute">D.Y. Patil International University</div>
-        <div class="edu-meta">
-          <span class="edu-badge">July 2021 – May 2025</span>
-          <span class="edu-badge">CGPA: 8.20</span>
-        </div>
+        <div class="edu-inst">D.Y. Patil International University</div>
+        <div class="edu-meta"><span>2021 – 2025</span><span>CGPA: 8.20</span></div>
       </div>
       <div class="edu-card">
+        <div class="edu-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
         <div class="edu-degree">Class XII — HSC</div>
-        <div class="edu-institute">Ramkrishna Vidhya Bhavan</div>
-        <div class="edu-meta">
-          <span class="edu-badge">June 2020</span>
-          <span class="edu-badge">68.20%</span>
-        </div>
+        <div class="edu-inst">Ramkrishna Vidhya Bhavan</div>
+        <div class="edu-meta"><span>2020</span><span>68.20%</span></div>
       </div>
       <div class="edu-card">
+        <div class="edu-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
         <div class="edu-degree">Class X — SSC</div>
-        <div class="edu-institute">Navchetan Vidhyabhavan</div>
-        <div class="edu-meta">
-          <span class="edu-badge">June 2018</span>
-          <span class="edu-badge">71.20%</span>
-        </div>
+        <div class="edu-inst">Navchetan Vidhyabhavan</div>
+        <div class="edu-meta"><span>2018</span><span>71.20%</span></div>
       </div>
     </div>
-    <div style="margin-top:4rem">
-      <div class="section-label fade-in" style="margin-bottom:1.5rem">Certifications</div>
-      <div class="certs-grid fade-in" style="transition-delay:0.1s">
-        <div class="cert-card"><div class="cert-icon">☁️</div><div><div class="cert-name">AWS Certified</div><div class="cert-issuer">Amazon Web Services</div></div></div>
-        <div class="cert-card"><div class="cert-icon">🤖</div><div><div class="cert-name">Oracle AI Foundations</div><div class="cert-issuer">Oracle</div></div></div>
-        <div class="cert-card"><div class="cert-icon">🐍</div><div><div class="cert-name">Python for Everybody</div><div class="cert-issuer">Coursera</div></div></div>
-        <div class="cert-card"><div class="cert-icon">💼</div><div><div class="cert-name">Software Dev. Trainee</div><div class="cert-issuer">Internship Certification</div></div></div>
+    <div class="cert-grid fade-in" style="transition-delay:0.1s">
+      <div class="cert-item">
+        <div class="cert-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg></div>
+        <div><div class="cert-name">AWS Certified</div><div class="cert-by">Amazon Web Services</div></div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M4.93 4.93a10 10 0 0 0 0 14.14"/></svg></div>
+        <div><div class="cert-name">Oracle AI Foundations</div><div class="cert-by">Oracle</div></div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+        <div><div class="cert-name">Python for Everybody</div><div class="cert-by">Coursera</div></div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+        <div><div class="cert-name">Software Dev. Trainee</div><div class="cert-by">Internship Certification</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT — mailto based, no fake form -->
+<!-- CONTACT -->
 <section id="contact">
   <div class="container">
-    <div class="fade-in">
-      <div class="section-label">Let's Talk</div>
-      <h2 class="section-title">Get In <span>Touch</span></h2>
-      <div class="section-divider"></div>
-    </div>
-    <div class="contact-grid">
-      <div class="fade-in">
-        <p style="color:var(--text-muted);margin-bottom:2rem">
-          Have a project, job opportunity, or just want to connect?
-          I'm always open to interesting conversations — reach out directly
-          and I'll get back within 24 hours.
-        </p>
-        <div class="contact-details">
+    <div class="contact-wrap">
+      <div class="contact-left fade-in">
+        <span class="section-eyebrow">contact</span>
+        <h2 class="section-title" style="margin-bottom:1rem">Let's work<br><em>together</em></h2>
+        <p class="contact-desc">Whether you have a project in mind, a job opportunity, or just want to say hi — my inbox is always open. I'll get back to you within 24 hours.</p>
+        <div class="contact-items">
           <a href="mailto:shyamsolanki2903@gmail.com" class="contact-item">
-            <div class="contact-icon">✉</div>
-            <div>
-              <div class="contact-item-label">Email (click to open)</div>
-              <div class="contact-item-value">shyamsolanki2903@gmail.com</div>
-            </div>
+            <div class="ci-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <div><div class="ci-label">email</div><div class="ci-val">shyamsolanki2903@gmail.com</div></div>
           </a>
           <a href="tel:+918866001801" class="contact-item">
-            <div class="contact-icon">📞</div>
-            <div>
-              <div class="contact-item-label">Phone</div>
-              <div class="contact-item-value">+91 8866001801</div>
-            </div>
+            <div class="ci-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.42 2 2 0 0 1 3.57 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.13 6.13l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+            <div><div class="ci-label">phone</div><div class="ci-val">+91 8866001801</div></div>
           </a>
           <a href="https://linkedin.com/in/shyam-solanki" target="_blank" class="contact-item">
-            <div class="contact-icon">💼</div>
-            <div>
-              <div class="contact-item-label">LinkedIn</div>
-              <div class="contact-item-value">linkedin.com/in/shyam-solanki</div>
-            </div>
+            <div class="ci-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2"/><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
+            <div><div class="ci-label">linkedin</div><div class="ci-val">linkedin.com/in/shyam-solanki</div></div>
           </a>
           <div class="contact-item">
-            <div class="contact-icon">📍</div>
-            <div>
-              <div class="contact-item-label">Location</div>
-              <div class="contact-item-value">Mumbai, Maharashtra, India</div>
-            </div>
+            <div class="ci-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div><div class="ci-label">location</div><div class="ci-val">Mumbai, Maharashtra, India</div></div>
           </div>
         </div>
       </div>
-
-      <div class="fade-in" style="transition-delay:0.15s">
+      <div class="contact-right fade-in" style="transition-delay:0.15s;padding-top:14rem">
         <form class="contact-form" id="contactForm">
           <div class="form-row">
-            <div class="form-group">
-              <label for="fname">Your Name</label>
-              <input type="text" id="fname" placeholder="John Doe" required>
-            </div>
-            <div class="form-group">
-              <label for="femail">Email Address</label>
-              <input type="email" id="femail" placeholder="john@example.com" required>
-            </div>
+            <div class="fg"><label for="fname">your name</label><input type="text" id="fname" placeholder="FullName" required></div>
+            <div class="fg"><label for="femail">email</label><input type="email" id="femail" placeholder="user@example.com" required></div>
           </div>
-          <div class="form-group">
-            <label for="fsubject">Subject</label>
-            <input type="text" id="fsubject" placeholder="Job Opportunity / Project Collaboration">
-          </div>
-          <div class="form-group">
-            <label for="fmessage">Message</label>
-            <textarea id="fmessage" placeholder="Tell me about your project or opportunity..."></textarea>
-          </div>
-          <button type="submit" class="form-submit">Send via Email</button>
-          <p class="form-note">This will open your email client with the message pre-filled.</p>
+          <div class="fg"><label for="fsubject">subject</label><input type="text" id="fsubject" placeholder="Job opportunity / Project collab"></div>
+          <div class="fg"><label for="fmessage">message</label><textarea id="fmessage" placeholder="Tell me what you're working on..."></textarea></div>
+          <button type="submit" class="btn-main" style="width:100%;justify-content:center;">send message →</button>
+          <p class="form-note">Opens your email client with message pre-filled.</p>
         </form>
       </div>
     </div>
@@ -597,56 +445,46 @@
 </section>
 
 <footer>
-  <div class="footer-logo">SS.</div>
-  <div class="footer-copy">© 2025 Shyam Solanki · All rights reserved.</div>
-  <div class="social-links">
-    <a href="https://linkedin.com/in/shyam-solanki" target="_blank" class="social-link">LinkedIn</a>
-    <a href="mailto:shyamsolanki2903@gmail.com" class="social-link">Email</a>
+  <div class="container footer-inner">
+    <div class="footer-left">
+      <span class="footer-logo">shyam.dev</span>
+      <span class="footer-copy">Made with care in Mumbai · © 2025 Shyam Solanki</span>
+    </div>
+    <div class="footer-links">
+      <a href="https://linkedin.com/in/shyam-solanki" target="_blank">LinkedIn ↗</a>
+      <a href="mailto:shyamsolanki2903@gmail.com">Email ↗</a>
+    </div>
   </div>
 </footer>
 
 <!-- VIDEO DEMO MODAL -->
 <div id="demoModal" class="demo-modal-overlay">
   <div class="demo-modal-box">
-
-    <!-- HEADER -->
     <div class="demo-modal-header">
       <div class="demo-modal-title">
         <span class="badge-preview">▶ Preview</span>
-        <span style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;">EduRoot — School ERP SaaS (Live System Demo)</span>
+        <span class="demo-title-text">EduRoot — School ERP SaaS (Live System Demo)</span>
       </div>
       <button class="demo-close-btn" id="demoCloseBtn">✕</button>
     </div>
-
-    <!-- VIDEO + INTRO OVERLAY -->
     <div class="demo-video-wrap" id="demoVideoWrap">
-      <!-- Cinematic intro overlay -->
       <div class="demo-intro-overlay" id="demoIntro">
         <div class="demo-intro-content">
           <div class="demo-intro-line1">School ERP SaaS Platform</div>
           <div class="demo-intro-line2">Built for Real Institutions · 2+ Schools Live</div>
         </div>
       </div>
-      <video
-        id="demoVideo"
-        controls
-        muted
-        style="width:100%;height:100%;background:#000;display:block;"
-        preload="auto"
-      >
+      <video id="demoVideo" controls muted style="width:100%;height:100%;background:#000;display:block;" preload="auto">
         <source src="final_merged.mp4" type="video/mp4">
       </video>
     </div>
-
-    <!-- FOOTER -->
     <div class="demo-modal-footer">
-      <span style="font-size:0.72rem;color:var(--text-muted);">Multi-tenant SaaS · 2+ Schools Live · Real-time Analytics · Role-based Access</span>
-      <div style="display:flex;gap:0.75rem;align-items:center;">
-        <a href="#contact" class="demo-cta-btn" id="demoRequestBtn">📩 Request Full Access</a>
-        <button class="demo-ctrl-btn demo-ctrl-primary" onclick="goFullscreen()">⛶ Fullscreen</button>
+      <span class="demo-footer-info">Multi-tenant SaaS · 2+ Schools Live · Real-time Analytics · Role-based Access</span>
+      <div class="demo-footer-actions">
+        <a href="#contact" class="demo-cta-btn" id="demoRequestBtn">Request Full Access</a>
+        <button class="demo-ctrl-btn" onclick="goFullscreen()">Fullscreen</button>
       </div>
     </div>
-
   </div>
 </div>
 

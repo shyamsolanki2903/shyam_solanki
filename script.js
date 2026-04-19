@@ -70,82 +70,50 @@ const sectionObserver = new IntersectionObserver((entries) => {
     if (entry.isIntersecting) {
       navAnchors.forEach(a => a.style.color = '');
       const active = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
-      if (active) active.style.color = 'var(--gold)';
+      if (active) active.style.color = '#111';
     }
   });
 }, { threshold: 0.45 });
 sections.forEach(sec => sectionObserver.observe(sec));
-/* ============================================
-   VIDEO DEMO MODAL
-   ============================================ */
-
-/* ============================================
-   VIDEO DEMO MODAL
-   ============================================ */
+/* VIDEO MODAL */
 function openDemoModal() {
-  const modal  = document.getElementById('demoModal');
-  const video  = document.getElementById('demoVideo');
-  const intro  = document.getElementById('demoIntro');
+  const modal = document.getElementById('demoModal');
+  const video = document.getElementById('demoVideo');
+  const intro = document.getElementById('demoIntro');
+  if (!modal) return;
   modal.classList.add('active');
   document.body.style.overflow = 'hidden';
-
-  // Reset intro overlay
   if (intro) {
-    intro.style.animation = 'none';
-    intro.style.opacity   = '1';
-    intro.style.pointerEvents = 'all';
-    void intro.offsetWidth; // reflow
-    intro.style.animation = '';
+    intro.style.animation = 'none'; intro.style.opacity = '1'; intro.style.pointerEvents = 'all';
+    void intro.offsetWidth; intro.style.animation = '';
   }
-
-  // Auto-play after intro finishes (2.7s)
   if (video) {
     video.currentTime = 0;
     setTimeout(() => {
       video.muted = false;
-      video.play().catch(() => {
-        video.muted = true;
-        video.play();
-      });
+      video.play().catch(() => { video.muted = true; video.play(); });
     }, 2700);
   }
 }
-
 function _closeModal() {
   const modal = document.getElementById('demoModal');
   const video = document.getElementById('demoVideo');
-  modal.classList.remove('active');
+  if (modal) modal.classList.remove('active');
   document.body.style.overflow = '';
   if (video) { video.pause(); video.currentTime = 0; }
 }
-
-// ESC to close
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') _closeModal();
-});
-
-// Click outside modal box to close
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') _closeModal(); });
 document.addEventListener('DOMContentLoaded', () => {
-  const overlay  = document.getElementById('demoModal');
   const closeBtn = document.getElementById('demoCloseBtn');
+  const overlay  = document.getElementById('demoModal');
   const reqBtn   = document.getElementById('demoRequestBtn');
-
   if (closeBtn) closeBtn.addEventListener('click', _closeModal);
-
-  if (overlay) overlay.addEventListener('click', (e) => {
-    if (e.target === overlay) _closeModal();
-  });
-
-  // "Request Full Access" → close modal & scroll to contact
-  if (reqBtn) reqBtn.addEventListener('click', () => {
-    _closeModal();
-  });
+  if (overlay)  overlay.addEventListener('click', (e) => { if (e.target === overlay) _closeModal(); });
+  if (reqBtn)   reqBtn.addEventListener('click', _closeModal);
 });
-
 function goFullscreen() {
-  const video = document.getElementById('demoVideo');
-  if (!video) return;
-  if      (video.requestFullscreen)       video.requestFullscreen();
-  else if (video.webkitRequestFullscreen) video.webkitRequestFullscreen();
-  else if (video.mozRequestFullScreen)    video.mozRequestFullScreen();
+  const v = document.getElementById('demoVideo');
+  if (!v) return;
+  if (v.requestFullscreen) v.requestFullscreen();
+  else if (v.webkitRequestFullscreen) v.webkitRequestFullscreen();
 }
