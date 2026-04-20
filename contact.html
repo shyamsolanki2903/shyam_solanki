@@ -6,6 +6,69 @@
   <title>Contact — Shyam Solanki</title>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
+  <!-- ✅ EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    // ✅ Apni PUBLIC KEY yahan daalo
+    emailjs.init("zL3V_kwaFGkT2q21B");
+  </script>
+
+  <style>
+    /* Toast notification */
+    .toast {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      padding: 1rem 1.5rem;
+      border-radius: 10px;
+      font-family: 'Geist', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 500;
+      z-index: 9999;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.35s ease;
+      pointer-events: none;
+      max-width: 320px;
+    }
+    .toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .toast.success {
+      background: #1a1a1a;
+      color: #6ee7b7;
+      border: 1px solid #065f46;
+    }
+    .toast.error {
+      background: #1a1a1a;
+      color: #fca5a5;
+      border: 1px solid #7f1d1d;
+    }
+
+    /* Button loading state */
+    .btn-main.loading {
+      opacity: 0.7;
+      pointer-events: none;
+      cursor: not-allowed;
+    }
+    .btn-main.loading::after {
+      content: '';
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border: 2px solid currentColor;
+      border-top-color: transparent;
+      border-radius: 50%;
+      margin-left: 8px;
+      animation: spin 0.7s linear infinite;
+      vertical-align: middle;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
 </head>
 <body>
 
@@ -56,6 +119,7 @@
           </div>
         </div>
       </div>
+
       <div class="contact-right">
         <form class="contact-form" id="contactForm">
           <div class="form-row">
@@ -64,12 +128,63 @@
           </div>
           <div class="fg"><label for="fsubject">subject</label><input type="text" id="fsubject" placeholder="Job Opportunity / Interview Request"></div>
           <div class="fg"><label for="fmessage">message</label><textarea id="fmessage" placeholder="Hi Shyam, I'd like to discuss a job opportunity..."></textarea></div>
-          <button type="submit" class="btn-main" style="width:100%;justify-content:center;">send message →</button>
+          <button type="submit" class="btn-main" id="submitBtn" style="width:100%;justify-content:center;">send message →</button>
         </form>
       </div>
     </div>
   </div>
 </section>
+
+<!-- Toast Notification -->
+<div class="toast" id="toast"></div>
+
 <script src="script.js"></script>
+<script>
+  // ========================================
+  // ✅ YAHAN APNI VALUES DAALO
+  const EMAILJS_SERVICE_ID  = "service_0wrzrr2";
+  const EMAILJS_TEMPLATE_ID = "template_f57q97d";
+  // ========================================
+
+  function showToast(message, type = 'success') {
+    const toast = document.getElementById('toast');
+    toast.textContent = message;
+    toast.className = `toast ${type} show`;
+    setTimeout(() => { toast.classList.remove('show'); }, 4000);
+  }
+
+  document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const btn = document.getElementById('submitBtn');
+    const originalText = btn.textContent;
+
+    // Loading state
+    btn.textContent = 'sending';
+    btn.classList.add('loading');
+
+    // Form data — ye variable names EmailJS template mein {{...}} se match karne chahiye
+    const templateParams = {
+      from_name:  document.getElementById('fname').value.trim(),
+      from_email: document.getElementById('femail').value.trim(),
+      subject:    document.getElementById('fsubject').value.trim() || 'No Subject',
+      message:    document.getElementById('fmessage').value.trim(),
+    };
+
+    emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
+      .then(() => {
+        showToast('✓ Message sent! I\'ll reply within 24 hours.', 'success');
+        document.getElementById('contactForm').reset();
+      })
+      .catch((err) => {
+        console.error('EmailJS error:', err);
+        showToast('✗ Something went wrong. Try emailing directly.', 'error');
+      })
+      .finally(() => {
+        btn.textContent = originalText;
+        btn.classList.remove('loading');
+      });
+  });
+</script>
 </body>
 </html>
