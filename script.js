@@ -25,14 +25,14 @@ const fadeObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
 
-/* Typed effect */
+/* Typed effect — only on home page */
 const roles = [
   'Full Stack Engineer',
   'SaaS & Automation Engineer',
   'AI Workflow Builder',
   'Backend Systems Engineer',
-  'Problem Solver',
-  'Tech Enthusiast'
+  'Software Developer',
+  'Problem Solver'
 ];
 let roleIndex = 0, charIndex = 0, isDeleting = false;
 const typedEl = document.getElementById('typed-role');
@@ -55,26 +55,13 @@ if (contactForm) {
     e.preventDefault();
     const name    = document.getElementById('fname').value;
     const email   = document.getElementById('femail').value;
-    const subject = document.getElementById('fsubject').value || 'Portfolio Inquiry';
+    const subject = document.getElementById('fsubject').value || 'Job Opportunity Inquiry';
     const message = document.getElementById('fmessage').value;
     const body = `Hi Shyam,\n\nMy name is ${name} (${email}).\n\n${message}\n\nRegards,\n${name}`;
     window.location.href = `mailto:shyamsolanki2903@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   });
 }
 
-/* Active nav highlight */
-const sections = document.querySelectorAll('section[id]');
-const navAnchors = document.querySelectorAll('.nav-links a');
-const sectionObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      navAnchors.forEach(a => a.style.color = '');
-      const active = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
-      if (active) active.style.color = '#111';
-    }
-  });
-}, { threshold: 0.45 });
-sections.forEach(sec => sectionObserver.observe(sec));
 /* VIDEO MODAL */
 function openDemoModal() {
   const modal = document.getElementById('demoModal');

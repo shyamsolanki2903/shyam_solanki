@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills — Shyam Solanki</title>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    * { box-sizing: border-box; }
+
+    .skills-page-wrap { /* kept for fallback */ }
+
+    /* ── HEADING — About page style ── */
+    .page-eyebrow {
+      font-family: 'Geist Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      color: #6b7280;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      margin-top: 3rem;
+    }
+    .page-title {
+      font-family: 'Instrument Serif', serif;
+      font-weight: 400;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      letter-spacing: -1px;
+      text-align: left;
+      margin-bottom: 0.3rem;
+      color: var(--text, #111);
+      line-height: 1.15;
+    }
+    .page-title em {
+      font-style: italic;
+      color: #5b7cf7;
+      display: block;
+    }
+    .page-title-line {
+      width: 36px;
+      height: 2px;
+      background: var(--text, #111);
+      margin: 0.5rem 0 1.6rem 0;
+    }
+
+    /* ── TWO-TONE LAYOUT ── */
+    body { background: #fff; }
+    .skills-hero {
+      background: #f5f5f3;
+      padding: 5rem 2.5rem 4rem;
+      border-bottom: 1px solid #e5e5e3;
+    }
+    .skills-body {
+      background: #fff;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 2.5rem 3rem;
+    }
+    .skills-hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* ── SECTION ── */
+    .sk-section { margin-bottom: 0.85rem; }
+    .sk-section-title {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text, #111);
+      margin-bottom: 0.45rem;
+      font-family: 'Geist', sans-serif;
+    }
+    .sk-section-title i { font-size: 0.82rem; }
+
+    .sk-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.38rem;
+      padding-left: 1.5rem;
+    }
+
+    /* ── BADGE ── */
+    .skb {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.38rem;
+      padding: 0.26rem 0.7rem;
+      border-radius: 5px;
+      font-family: 'Geist Mono', monospace;
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: #fff;
+      transition: opacity 0.15s, transform 0.15s;
+      cursor: default;
+      white-space: nowrap;
+    }
+    .skb:hover { opacity: 0.85; transform: translateY(-1px); }
+    .skb i { font-size: 0.72rem; }
+
+    /* ── DIVIDER ── */
+    .sk-divider {
+      border: none;
+      border-top: 1px solid #ebebeb;
+      margin: 0.85rem 0;
+    }
+
+    /* Colors */
+    .skb-python   { background: #3776ab; }
+    .skb-js       { background: #b8960c; }
+    .skb-java     { background: #e07000; }
+    .skb-php      { background: #4f5b93; }
+    .skb-kotlin   { background: #7f52ff; }
+    .skb-dart     { background: #0175c2; }
+    .skb-react    { background: #1a1a1a; }
+    .skb-next     { background: #000; }
+    .skb-angular  { background: #b3002d; }
+    .skb-html     { background: #4a4a4a; }
+    .skb-css3     { background: #264de4; }
+    .skb-bootstrap{ background: #6f42c1; }
+    .skb-tailwind { background: #0ea5e9; }
+    .skb-jquery   { background: #0769ad; }
+    .skb-flutter  { background: #027dfd; }
+    .skb-capacitor{ background: #119eff; }
+    .skb-androidtv{ background: #3ddc84; color: #103600; }
+    .skb-nodejs   { background: #3c873a; }
+    .skb-express  { background: #333; }
+    .skb-fastapi  { background: #059669; }
+    .skb-dotnet   { background: #512bd4; }
+    .skb-spring   { background: #5a9e47; }
+    .skb-hibernate{ background: #59666c; }
+    .skb-ci4      { background: #dd4814; }
+    .skb-rest     { background: #4a90d9; }
+    .skb-otp      { background: #6366f1; }
+    .skb-oauth    { background: #4285f4; }
+    .skb-whatsapp { background: #25d366; color: #052e16; }
+    .skb-meta     { background: #0866ff; }
+    .skb-mysql    { background: #00618a; }
+    .skb-mongo    { background: #4db33d; }
+    .skb-postgres { background: #336791; }
+    .skb-redis    { background: #d82c20; }
+    .skb-awsrds   { background: #527fff; }
+    .skb-aws      { background: #ff9900; color: #1a1a1a; }
+    .skb-azure    { background: #0078d4; }
+    .skb-do       { background: #0080ff; }
+    .skb-git      { background: #f05032; }
+    .skb-vscode   { background: #0078d7; }
+    .skb-replit   { background: #f26207; }
+    .skb-eclipse  { background: #2c2255; }
+
+    @media(max-width:600px){
+      .skills-page-wrap { padding: 1.5rem 1rem 2rem; }
+      .sk-badges { padding-left: 0; }
+    }
+  </style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="index.html" class="nav-logo">shyam.dev</a>
+  <ul class="nav-links">
+    <li><a href="index.html">home</a></li>
+    <li><a href="about.html">about</a></li>
+    <li><a href="skills.html" class="active">skills</a></li>
+    <li><a href="projects.html">projects</a></li>
+    <li><a href="experience.html">experience</a></li>
+    <li><a href="contact.html">contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="status-pill"><span class="status-dot"></span>available for opportunities</div>
+    <button class="nav-menu-btn" aria-label="Menu">☰</button>
+  </div>
+</nav>
+
+<div class="skills-hero">
+  <div class="skills-hero-inner">
+    <div class="page-eyebrow">SKILLS</div>
+    <h1 class="page-title">What I know &amp;<br><em>work with</em></h1>
+  </div>
+</div>
+
+<div class="skills-body">
+
+  <!-- LANGUAGES -->
+  <div class="sk-section">
+    <div class="sk-section-title"><i class="fa-solid fa-code"></i> Programming Language</div>
+    <div class="sk-badges">
+      <span class="skb skb-java"><i class="fa-brands fa-java"></i> Java</span>
+      <span class="skb skb-python"><i class="fa-brands fa-python"></i> Python</span>
+      <span class="skb skb-php"><i class="fa-brands fa-php"></i> PHP</span>
+      <span class="skb skb-js"><i class="fa-brands fa-js"></i> JavaScript</span>
+      <span class="skb skb-kotlin"><i class="fa-solid fa-k"></i> Kotlin</span>
+      <span class="skb skb-dart"><i class="fa-solid fa-circle-dot"></i> Dart</span>
+    </div>
+  </div>
+
+  <hr class="sk-divider">
+
+  <!-- FRONTEND -->
+  <div class="sk-section">
+    <div class="sk-section-title"><i class="fa-solid fa-display"></i> Frontend Technologies</div>
+    <div class="sk-badges">
+      <span class="skb skb-react"><i class="fa-brands fa-react"></i> React</span>
+      <span class="skb skb-next"><i class="fa-solid fa-n"></i> Next</span>
+      <span class="skb skb-angular"><i class="fa-brands fa-angular"></i> Angular</span>
+      <span class="skb skb-bootstrap"><i class="fa-brands fa-bootstrap"></i> Bootstrap</span>
+      <span class="skb skb-tailwind"><i class="fa-solid fa-wind"></i> TailwindCSS</span>
+      <span class="skb skb-jquery"><i class="fa-solid fa-j"></i> jQuery</span>
+      <span class="skb skb-flutter"><i class="fa-solid fa-mobile-screen"></i> Flutter</span>
+      <span class="skb skb-capacitor"><i class="fa-solid fa-bolt"></i> Capacitor</span>
+    </div>
+  </div>
+
+  <hr class="sk-divider">
+
+  <!-- BACKEND -->
+  <div class="sk-section">
+    <div class="sk-section-title"><i class="fa-solid fa-server"></i> Backend Technologies &amp; Frameworks</div>
+    <div class="sk-badges">
+      <span class="skb skb-nodejs"><i class="fa-brands fa-node-js"></i> Node.js</span>
+      <span class="skb skb-express"><i class="fa-solid fa-circle-nodes"></i> Express.js</span>
+      <span class="skb skb-fastapi"><i class="fa-solid fa-bolt"></i> FastAPI</span>
+      <span class="skb skb-dotnet"><i class="fa-solid fa-dot-circle"></i> .NET</span>
+      <span class="skb skb-php"><i class="fa-brands fa-php"></i> PHP</span>
+      <span class="skb skb-spring"><i class="fa-solid fa-leaf"></i> Spring</span>
+      <span class="skb skb-hibernate"><i class="fa-solid fa-h"></i> Hibernate</span>
+      <span class="skb skb-ci4"><i class="fa-solid fa-fire"></i> CodeIgniter 4</span>
+      <span class="skb skb-rest"><i class="fa-solid fa-plug"></i> REST APIs</span>
+    </div>
+  </div>
+
+  <hr class="sk-divider">
+
+  <!-- DATABASES -->
+  <div class="sk-section">
+    <div class="sk-section-title"><i class="fa-solid fa-database"></i> Databases</div>
+    <div class="sk-badges">
+      <span class="skb skb-mongo"><i class="fa-solid fa-leaf"></i> MongoDB</span>
+      <span class="skb skb-mysql"><i class="fa-solid fa-m"></i> MySQL</span>
+      <span class="skb skb-postgres"><i class="fa-solid fa-p"></i> PostgreSQL</span>
+      <span class="skb skb-redis"><i class="fa-solid fa-fire-flame-curved"></i> Redis</span>
+      <span class="skb skb-awsrds"><i class="fa-brands fa-aws"></i> AWS RDS</span>
+    </div>
+  </div>
+
+  <hr class="sk-divider">
+
+  <!-- CLOUD -->
+  <div class="sk-section">
+    <div class="sk-section-title"><i class="fa-solid fa-cloud"></i> Cloud &amp; Infrastructure</div>
+    <div class="sk-badges">
+      <span class="skb skb-aws"><i class="fa-brands fa-aws"></i> AWS</span>
+      <span class="skb skb-azure"><i class="fa-solid fa-cloud"></i> Azure</span>
+      <span class="skb skb-do"><i class="fa-brands fa-digital-ocean"></i> DigitalOcean</span>
+    </div>
+  </div>
+
+  <hr class="sk-divider">
+
+  <!-- TOOLS -->
+  <div class="sk-section">
+    <div class="sk-section-title"><i class="fa-solid fa-terminal"></i> Tools, IDEs &amp; Version Control</div>
+    <div class="sk-badges">
+      <span class="skb skb-git"><i class="fa-brands fa-git-alt"></i> Git / GitHub</span>
+      <span class="skb skb-vscode"><i class="fa-solid fa-code"></i> Visual Studio Code</span>
+      <span class="skb skb-replit"><i class="fa-solid fa-r"></i> Replit</span>
+      <span class="skb skb-eclipse"><i class="fa-solid fa-e"></i> Eclipse</span>
+    </div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+<script>
+  window.addEventListener('scroll', () => {
+    const nav = document.getElementById('nav');
+    if (nav) nav.classList.toggle('scrolled', window.scrollY > 40);
+  });
+</script>
+</body>
+</html>

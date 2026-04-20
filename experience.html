@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experience — Shyam Solanki</title>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ── Split Layout ── */
+    .split-section {
+      padding: 40px 0;
+    }
+
+    .split-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 32px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    /* ── Column Headers ── */
+    .col-eyebrow {
+      font-family: 'Geist Mono', monospace;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      opacity: 0.45;
+      margin-bottom: 10px;
+    }
+
+    .col-title {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(28px, 3.5vw, 40px);
+      font-weight: 400;
+      line-height: 1.15;
+      margin-bottom: 40px;
+    }
+
+    .col-title em {
+      font-style: italic;
+    }
+
+    /* ── Divider between columns ── */
+    .split-divider {
+      position: relative;
+    }
+
+    .split-divider::before {
+      content: '';
+      position: absolute;
+      left: -32px;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: currentColor;
+      opacity: 0.1;
+    }
+
+    /* ── Experience (Left) ── */
+    .exp-item-new {
+      position: relative;
+      padding-left: 20px;
+      border-left: 2px solid;
+      border-color: currentColor;
+      opacity: 1;
+    }
+
+    .exp-item-new::before {
+      content: '';
+      position: absolute;
+      left: -6px;
+      top: 6px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: currentColor;
+      opacity: 0.8;
+    }
+
+    .exp-period-new {
+      font-family: 'Geist Mono', monospace;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      opacity: 0.45;
+      margin-bottom: 8px;
+    }
+
+    .exp-role-new {
+      font-family: 'Geist', sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .exp-company-new {
+      font-size: 13px;
+      opacity: 0.6;
+      margin-bottom: 16px;
+    }
+
+    .exp-list-new {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .exp-list-new li {
+      font-size: 13.5px;
+      line-height: 1.65;
+      opacity: 0.75;
+      padding-left: 14px;
+      position: relative;
+    }
+
+    .exp-list-new li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      opacity: 0.4;
+      font-size: 11px;
+    }
+
+    /* ── Education (Right) ── */
+    .edu-card-new {
+      border: 1px solid currentColor;
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin-bottom: 16px;
+      opacity: 0.95;
+      transition: opacity 0.2s ease;
+    }
+
+    .edu-card-new:hover {
+      opacity: 1;
+    }
+
+    .edu-icon-new {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0.6;
+      margin-bottom: 14px;
+    }
+
+    .edu-degree-new {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .edu-inst-new {
+      font-size: 13px;
+      opacity: 0.55;
+      margin-bottom: 10px;
+    }
+
+    .edu-meta-new {
+      display: flex;
+      gap: 16px;
+      font-family: 'Geist Mono', monospace;
+      font-size: 11px;
+      opacity: 0.45;
+    }
+
+    /* ── Certificates ── */
+    .cert-label {
+      font-family: 'Geist Mono', monospace;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      opacity: 0.35;
+      margin: 28px 0 14px;
+    }
+
+    .cert-grid-new {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .cert-item-new {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 12px 14px;
+      border-radius: 8px;
+      border: 1px solid currentColor;
+      opacity: 0.7;
+      transition: opacity 0.2s ease;
+    }
+
+    .cert-item-new:hover {
+      opacity: 1;
+    }
+
+    .cert-icon-new {
+      opacity: 0.5;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .cert-name-new {
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    .cert-by-new {
+      font-size: 11px;
+      opacity: 0.5;
+      margin-top: 2px;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .split-container {
+        grid-template-columns: 1fr;
+        gap: 56px;
+      }
+
+      .split-divider::before {
+        display: none;
+      }
+
+      .cert-grid-new {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="index.html" class="nav-logo">shyam.dev</a>
+  <ul class="nav-links">
+    <li><a href="index.html">home</a></li>
+    <li><a href="about.html">about</a></li>
+    <li><a href="skills.html">skills</a></li>
+    <li><a href="projects.html">projects</a></li>
+    <li><a href="experience.html" class="active">experience</a></li>
+    <li><a href="contact.html">contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="status-pill"><span class="status-dot"></span>available for opportunities</div>
+    <button class="nav-menu-btn" aria-label="Menu">☰</button>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="container">
+    <span class="page-eyebrow">experience</span>
+    <h1 class="page-title">Where I've<br><em>worked &amp; learned</em></h1>
+  </div>
+</div>
+
+<!-- ── SPLIT SECTION ── -->
+<section class="split-section">
+  <div class="split-container">
+
+    <!-- LEFT — Experience -->
+    <div class="fade-in">
+      <div class="col-eyebrow">work experience</div>
+      <h2 class="col-title">Professional Journey</h2>
+
+      <div class="exp-item-new">
+        <div class="exp-period-new">July 2024 — Present</div>
+        <div class="exp-role-new">Full Stack Developer</div>
+        <div class="exp-company-new"><strong>ISF Analytica &amp; Informatica Pvt. Ltd.</strong> · Mumbai</div>
+        <ul class="exp-list-new">
+          <li>Contributed to the development of a <strong>SaaS-based LMS platform</strong> — designed and implemented REST APIs and frontend components using PHP (CodeIgniter 4) and ReactJS, supporting real-time data across multiple institution deployments.</li>
+          <li>Developed an <strong>AI-powered content generation module</strong>, reducing manual content creation effort by <strong>70%+</strong> through automated courseware structuring and export pipelines.</li>
+          <li>Optimized AWS infrastructure — S3 lifecycle policies, auto-scaling, and instance rightsizing — <strong>reducing cloud infrastructure costs by 75%</strong>.</li>
+          <li>Delivered a <strong>cross-platform OTT application</strong> — Flutter (Android) + React + Capacitor (Android TV &amp; web) — with media streaming via AWS S3 &amp; CloudFront CDN.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- RIGHT — Academics + Certs -->
+    <div class="split-divider fade-in" style="transition-delay:0.1s">
+      <div class="col-eyebrow">education &amp; certifications</div>
+      <h2 class="col-title">Academic Background</h2>
+
+      <!-- College only -->
+      <div class="edu-card-new">
+        <div class="edu-icon-new">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+          </svg>
+        </div>
+        <div class="edu-degree-new">B.Tech in Computer Science</div>
+        <div class="edu-inst-new">D.Y. Patil International University</div>
+        <div class="edu-meta-new">
+          <span>2021 – 2025</span>
+          <span>CGPA: 8.20</span>
+        </div>
+      </div>
+
+      <!-- Certificates -->
+      <div class="cert-label">certifications</div>
+      <div class="cert-grid-new">
+        <div class="cert-item-new">
+          <div class="cert-icon-new">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
+            </svg>
+          </div>
+          <div>
+            <div class="cert-name-new">AWS Certified</div>
+            <div class="cert-by-new">Amazon Web Services</div>
+          </div>
+        </div>
+        <div class="cert-item-new">
+          <div class="cert-icon-new">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+              <path d="M4.93 4.93a10 10 0 0 0 0 14.14"/>
+            </svg>
+          </div>
+          <div>
+            <div class="cert-name-new">Oracle AI Foundations</div>
+            <div class="cert-by-new">Oracle</div>
+          </div>
+        </div>
+        <div class="cert-item-new">
+          <div class="cert-icon-new">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <polyline points="16 18 22 12 16 6"/>
+              <polyline points="8 6 2 12 8 18"/>
+            </svg>
+          </div>
+          <div>
+            <div class="cert-name-new">Python for Everybody</div>
+            <div class="cert-by-new">Coursera</div>
+          </div>
+        </div>
+        <div class="cert-item-new">
+          <div class="cert-icon-new">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <rect x="2" y="7" width="20" height="14" rx="2"/>
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+            </svg>
+          </div>
+          <div>
+            <div class="cert-name-new">Software Dev. Trainee</div>
+            <div class="cert-by-new">Internship Certification</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
